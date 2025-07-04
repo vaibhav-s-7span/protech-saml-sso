@@ -1,0 +1,48 @@
+app:
+  base-url: "https://api--staging.testiqo.com"
+  registration-id: "protech"
+
+spring:
+  application:
+    name: "protech-sso"
+  config:
+    import: optional:classpath:env.properties
+  security:
+    saml2:
+      relyingparty:
+        registration:
+          protech: # IDP registration key (customize)
+            identityprovider:
+              entity-id: "https://my.easa.com/Security/MWWSSO"  # ProTech's entityID
+              singlesignon.url: "https://my.easa.com/Security/MWWSSO"  # ProTech's SSO URL
+              verification.credentials:
+                - certificate-location: "classpath:idp-cert.pem"  # ProTech's public key
+            serviceprovider:
+              entity-id: "${app.base-url}/saml"  # Your SP's unique ID
+              acs-url: "${app.base-url}/login/saml2/sso/${app.registration-id}"
+              decryption.credentials:
+                - private-key-location: "classpath:keystore.p122"
+                  private-key-password: "Password@123"
+server:
+  port: 8083
+  servlet:
+    context-path: /
+  ssl:
+    enabled: false  # Set to true in prod with certs
+
+
+protech:
+  authSecret: "bd6b6f1b-dfc8-4ce5-b44d-4e68c9796afe"
+  authUrl: https://my.easa.com/DesktopModules/MX/Authentication.asmx
+  soapActions:
+    authToken: http://webportalbridge.ptassoc.com/Authentication/AuthenticateToken
+    authUser: http://webportalbridge.ptassoc.com/Authentication/AuthenticateUser
+
+
+
+
+# Log SAML messages for debugging
+#logging:
+#  level:
+#    org.springframework.security: ERROR
+#    org.opensaml: ERROR  # Reduce OpenSAML noise
