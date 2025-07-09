@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
-@Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -17,4 +16,20 @@ public class WebRole {
     private UUID id;
     @JsonProperty("name")
     private String name;
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

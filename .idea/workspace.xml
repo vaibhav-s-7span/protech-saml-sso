@@ -4,35 +4,103 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="504cae13-069d-4fa7-bb5a-4a5c3f968951" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/protech-sso/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/src/main/java/com/example/protech_sso/Authentication/AuthClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/src/main/java/com/example/protech_sso/Authentication/AuthResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/src/main/java/com/example/protech_sso/Authentication/AuthResponseProduction$AuthResponseProductionBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/src/main/java/com/example/protech_sso/Authentication/AuthResponseProduction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/src/main/java/com/example/protech_sso/Authentication/WebRole$WebRoleBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/src/main/java/com/example/protech_sso/Authentication/WebRole.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/src/main/java/com/example/protech_sso/Config/AuthConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/src/main/java/com/example/protech_sso/Config/SamlRequestCaptureFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/src/main/java/com/example/protech_sso/Config/SecurityConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/src/main/java/com/example/protech_sso/Config/SoapConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/src/main/java/com/example/protech_sso/Controller/ErrorController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/src/main/java/com/example/protech_sso/Controller/SamlController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/src/main/java/com/example/protech_sso/ProtechSsoApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/src/main/java/com/example/protech_sso/Service/SamlService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/src/main/resources/idp-cert.pem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/src/main/resources/idp-metadata.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/src/main/resources/keystore.p12" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/src/main/resources/protech/protech-auth.wsdl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/bin/src/test/java/com/example/protech_sso/ProtechSsoApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/protech-sso/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/protech-sso/mvnw.cmd" afterDir="false" />
+    <list default="true" id="504cae13-069d-4fa7-bb5a-4a5c3f968951" name="Changes" comment="Remove">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/protech_sso/config/SecurityFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/protech_sso/dto/CustomUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EASA-MWW-MWW-110-Protech-sso-spike/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../EASA-MWW-MWW-110-Protech-sso-spike/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Protech-token-validate/src/main/java/com/easa/authspike/protech/authentication/AuthClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Protech-token-validate/src/main/java/com/easa/authspike/protech/authentication/AuthClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/Protech-token-validate-backup/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/Protech-token-validate-backup/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/Protech-token-validate-backup/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/Protech-token-validate-backup/src/main/java/com/easa/authspike/AuthSpikeApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/Protech-token-validate-backup/src/main/java/com/easa/authspike/controller/WelcomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/Protech-token-validate-backup/src/main/java/com/easa/authspike/protech/authentication/AuthClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/Protech-token-validate-backup/src/main/java/com/easa/authspike/protech/authentication/AuthConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/Protech-token-validate-backup/src/main/java/com/easa/authspike/protech/authentication/AuthFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/Protech-token-validate-backup/src/main/java/com/easa/authspike/protech/authentication/AuthResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/Protech-token-validate-backup/src/main/java/com/easa/authspike/protech/authentication/AuthResponseProduction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/Protech-token-validate-backup/src/main/java/com/easa/authspike/protech/authentication/AuthService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/Protech-token-validate-backup/src/main/java/com/easa/authspike/protech/authentication/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/Protech-token-validate-backup/src/main/java/com/easa/authspike/protech/authentication/SoapConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/Protech-token-validate-backup/src/main/java/com/easa/authspike/protech/authentication/WebRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/Protech-token-validate-backup/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/Protech-token-validate-backup/src/main/resources/env.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/Protech-token-validate-backup/src/main/resources/protech/protech-auth.wsdl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/Protech-token-validate-backup/src/main/resources/template_env.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/protech-sso/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/protech-sso/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/protech-sso/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/protech-sso/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/protech-sso/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/protech-sso/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/protech-sso/src/main/java/com/example/protech_sso/Config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/protech-sso/src/main/java/com/example/protech_sso/Controller/ErrorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/protech-sso/src/main/java/com/example/protech_sso/Controller/SamlController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/protech-sso/src/main/java/com/example/protech_sso/ProtechSsoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/protech-sso/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/protech-sso/src/main/resources/idp-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/protech-sso/src/main/resources/idp-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/protech-sso/src/main/resources/keystore.p12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-3-7/protech-sso/src/test/java/com/example/protech_sso/ProtechSsoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/src/main/java/com/example/protech_sso/Authentication/AuthClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/src/main/java/com/example/protech_sso/Authentication/AuthResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/src/main/java/com/example/protech_sso/Authentication/AuthResponseProduction$AuthResponseProductionBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/src/main/java/com/example/protech_sso/Authentication/AuthResponseProduction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/src/main/java/com/example/protech_sso/Authentication/WebRole$WebRoleBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/src/main/java/com/example/protech_sso/Authentication/WebRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/src/main/java/com/example/protech_sso/Config/AuthConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/src/main/java/com/example/protech_sso/Config/SamlRequestCaptureFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/src/main/java/com/example/protech_sso/Config/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/src/main/java/com/example/protech_sso/Config/SoapConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/src/main/java/com/example/protech_sso/Controller/ErrorController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/src/main/java/com/example/protech_sso/Controller/SamlController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/src/main/java/com/example/protech_sso/ProtechSsoApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/src/main/java/com/example/protech_sso/Service/SamlService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/src/main/resources/idp-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/src/main/resources/idp-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/src/main/resources/keystore.p12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/src/main/resources/protech/protech-auth.wsdl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/bin/src/test/java/com/example/protech_sso/ProtechSsoApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/src/main/java/com/example/protech_sso/Authentication/AuthResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/src/main/java/com/example/protech_sso/ProtechSsoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/src/main/java/com/example/protech_sso/config/SamlRequestCaptureFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/src/main/java/com/example/protech_sso/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/src/main/java/com/example/protech_sso/config/SoapConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/src/main/java/com/example/protech_sso/controller/SamlController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/src/main/java/com/example/protech_sso/dto/AuthResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/src/main/java/com/example/protech_sso/dto/WebRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/src/main/java/com/example/protech_sso/service/SamlService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/src/main/resources/idp-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/src/main/resources/idp-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/src/main/resources/keystore.p12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/src/main/resources/protech/protech-auth.wsdl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup-new-4-7/protech-sso/src/test/java/com/example/protech_sso/ProtechSsoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backup/Protech-token-validate-backup/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../backup/Protech-token-validate-backup/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/protech_sso/Authentication/AuthResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/protech_sso/config/SamlRequestCaptureFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/protech_sso/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/protech_sso/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/protech_sso/controller/SamlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/protech_sso/controller/SamlController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/protech_sso/dto/AuthResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/protech_sso/dto/AuthResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/protech_sso/dto/WebRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/protech_sso/dto/WebRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/protech_sso/service/SamlService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/protech_sso/service/SamlService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,27 +129,34 @@
     </option>
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
+  &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2ym1QgJJr93uUIXudGWPAel3r23" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ProtechSsoApplication.executor": "Run",
-    "Maven.protech-sso [clean,install,-U].executor": "Run",
-    "Maven.protech-sso [clean].executor": "Run",
-    "Maven.protech-sso [install].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "<unknown>",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/vaibhavsavaliya/Documents/Projects/Spring-Test/protech-sso",
-    "run.code.analysis.last.selected.profile": "pProject Default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ProtechSsoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.protech-sso [clean,install,-U].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.protech-sso [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.protech-sso [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/vaibhavsavaliya/Documents/Projects/Spring-Test/backup-new-4-7/protech-sso&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/protech" />

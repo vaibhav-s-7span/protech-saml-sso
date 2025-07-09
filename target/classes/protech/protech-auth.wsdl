@@ -1,0 +1,133 @@
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+                  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+                  xmlns:tns="http://webportalbridge.ptassoc.com/Authentication/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  targetNamespace="http://webportalbridge.ptassoc.com/Authentication/">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The Authentication web service is used to
+        authenticate a user in the CRM4M database and implement the 'Unified Login' architecture.
+    </wsdl:documentation>
+    <wsdl:types>
+        <s:schema elementFormDefault="qualified" targetNamespace="http://webportalbridge.ptassoc.com/Authentication/">
+            <s:element name="AuthenticateToken">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="securityPassword" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="AuthenticateTokenResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="AuthenticateTokenResult" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="AuthenticateUser">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="securityPassword" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+
+
+
+
+
+        </s:schema>
+    </wsdl:types>
+    <wsdl:message name="AuthenticateTokenSoapIn">
+        <wsdl:part name="parameters" element="tns:AuthenticateToken"/>
+    </wsdl:message>
+    <wsdl:message name="AuthenticateTokenSoapOut">
+        <wsdl:part name="parameters" element="tns:AuthenticateTokenResponse"/>
+    </wsdl:message>
+    <wsdl:message name="AuthenticateUserSoapIn">
+        <wsdl:part name="parameters" element="tns:AuthenticateUser"/>
+    </wsdl:message>
+
+
+
+    <wsdl:portType name="Authentication_x0020_Web_x0020_ServiceSoap">
+        <wsdl:operation name="AuthenticateToken">
+            <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Verifies the existence of a user
+                session.
+            </wsdl:documentation>
+            <wsdl:input message="tns:AuthenticateTokenSoapIn"/>
+            <wsdl:output message="tns:AuthenticateTokenSoapOut"/>
+        </wsdl:operation>
+
+
+    </wsdl:portType>
+    <wsdl:binding name="Authentication_x0020_Web_x0020_ServiceSoap"
+                  type="tns:Authentication_x0020_Web_x0020_ServiceSoap">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="AuthenticateToken">
+            <soap:operation soapAction="http://webportalbridge.ptassoc.com/Authentication/AuthenticateToken"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AuthenticateUser">
+            <soap:operation soapAction="http://webportalbridge.ptassoc.com/Authentication/AuthenticateUser"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+
+
+    </wsdl:binding>
+    <wsdl:binding name="Authentication_x0020_Web_x0020_ServiceSoap12"
+                  type="tns:Authentication_x0020_Web_x0020_ServiceSoap">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="AuthenticateToken">
+            <soap12:operation soapAction="http://webportalbridge.ptassoc.com/Authentication/AuthenticateToken"
+                              style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AuthenticateUser">
+            <soap12:operation soapAction="http://webportalbridge.ptassoc.com/Authentication/AuthenticateUser"
+                              style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+
+
+    </wsdl:binding>
+    <wsdl:service name="Authentication_x0020_Web_x0020_Service">
+        <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The Authentication web service is used to
+            authenticate a user in the CRM4M database and implement the 'Unified Login' architecture.
+        </wsdl:documentation>
+        <wsdl:port name="Authentication_x0020_Web_x0020_ServiceSoap"
+                   binding="tns:Authentication_x0020_Web_x0020_ServiceSoap">
+            <soap:address location="https://my.easa.com/DesktopModules/MX/Authentication.asmx"/>
+        </wsdl:port>
+        <wsdl:port name="Authentication_x0020_Web_x0020_ServiceSoap12"
+                   binding="tns:Authentication_x0020_Web_x0020_ServiceSoap12">
+            <soap12:address location="https://my.easa.com/DesktopModules/MX/Authentication.asmx"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

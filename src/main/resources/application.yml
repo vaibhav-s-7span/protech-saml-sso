@@ -1,28 +1,7 @@
-app:
-  base-url: "https://api--staging.testiqo.com"
-  registration-id: "protech"
-
 spring:
   application:
     name: "protech-sso"
-  config:
-    import: optional:classpath:env.properties
-  security:
-    saml2:
-      relyingparty:
-        registration:
-          protech: # IDP registration key (customize)
-            identityprovider:
-              entity-id: "https://my.easa.com/Security/MWWSSO"  # ProTech's entityID
-              singlesignon.url: "https://my.easa.com/Security/MWWSSO"  # ProTech's SSO URL
-              verification.credentials:
-                - certificate-location: "classpath:idp-cert.pem"  # ProTech's public key
-            serviceprovider:
-              entity-id: "${app.base-url}/saml"  # Your SP's unique ID
-              acs-url: "${app.base-url}/login/saml2/sso/${app.registration-id}"
-              decryption.credentials:
-                - private-key-location: "classpath:keystore.p122"
-                  private-key-password: "Password@123"
+
 server:
   port: 8083
   servlet:
