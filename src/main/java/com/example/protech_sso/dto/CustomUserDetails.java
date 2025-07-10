@@ -8,7 +8,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
-@Getter
 public record CustomUserDetails(AuthResponse authResponse) implements UserDetails {
 
     @Override

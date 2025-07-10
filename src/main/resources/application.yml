@@ -9,19 +9,9 @@ server:
   ssl:
     enabled: false  # Set to true in prod with certs
 
-
 protech:
   authSecret: "bd6b6f1b-dfc8-4ce5-b44d-4e68c9796afe"
   authUrl: https://my.easa.com/DesktopModules/MX/Authentication.asmx
   soapActions:
     authToken: http://webportalbridge.ptassoc.com/Authentication/AuthenticateToken
     authUser: http://webportalbridge.ptassoc.com/Authentication/AuthenticateUser
-
-
-
-
-# Log SAML messages for debugging
-#logging:
-#  level:
-#    org.springframework.security: ERROR
-#    org.opensaml: ERROR  # Reduce OpenSAML noise
